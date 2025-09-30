@@ -1,19 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import type { LatLngExpression } from "leaflet";
-
-type Station = {
-  id: number;
-  name: string;
-  lat: number;
-  lng: number;
-  status: string;
-};
-
-const stations: Station[] = [
-  { id: 1, name: "Station 1", lat: 50.4501, lng: 30.5234, status: "Вільна" },
-  { id: 2, name: "Station 2", lat: 50.4601, lng: 30.5134, status: "Зайнята" },
-];
+import { Link } from "react-router-dom";
+import { stations } from "../data/stations";
 
 export default function Map() {
   // Задаємо тип явно
@@ -27,11 +16,16 @@ export default function Map() {
       />
 
       {stations.map((station) => (
-        <Marker key={station.id} position={[station.lat, station.lng] as LatLngExpression}>
+       <Marker
+          key={station.id}
+          position={station.coords as LatLngExpression}
+        >
           <Popup>
-            <b>{station.name}</b>
+            <b style={{fontSize:"23px"}}>{station.name}</b>
             <br />
-            Статус: {station.status}
+            <b>*Street name</b>
+            <br />
+            <Link to={`/station/${station.id}`}>Детальніше</Link>
           </Popup>
         </Marker>
       ))}
