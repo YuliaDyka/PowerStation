@@ -4,6 +4,7 @@ import Login from "./pages/LoginPage";
 import Register from "./pages/SignupPage";
 import NavBar from "../src/assets/NavBar";
 import StationPage from "./pages/StationPage"; 
+import "./App.css"
 // import { Link } from "react-router-dom";
 
 export default function App() {

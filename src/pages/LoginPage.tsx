@@ -3,7 +3,7 @@
 
 function LoginPage() {
   return (
-    <p>login page</p>
+    <p>log in page</p>
   );
 }
 export default LoginPage;

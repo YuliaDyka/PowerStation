@@ -10,11 +10,15 @@ export default function StationPage() {
   }
 
   return (
-    <div style={{ height:"50vh", width:"56.7vw", paddingTop:"160px", paddingLeft:"660px" }}>
+    <div style={{ height:"50vh", width:"56.7vw", paddingTop:"160px", paddingLeft:"340px" }}>
       <h2>{station.name}</h2>
-      <p>{station.description}</p>
-      <button>pay</button>
-      <br></br>
+      <p><b>Адреса:</b> {station.address}</p>
+      <p><b>Опис:</b> {station.description}</p>
+      <p><b>Статус:</b> {station.status}</p>
+      <button onClick={() => alert("Оплата ще в розробці 😅")}>
+        Pay
+      </button>
+      <br /><br />
       <Link to="/">⬅ Назад на карту</Link>
     </div>
   );
