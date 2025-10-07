@@ -1,0 +1,62 @@
+/* style={{ height:"50vh", width:"56.7vw", paddingTop:"160px", paddingLeft:"340px" }} */
+.station_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 120px; /* щоб було трохи відступу від верху */
+  min-height: 100vh;
+  background-color: #f5f7fa; /* світлий фон */
+}
+
+.station_container > div {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.station_container h2 {
+  font-size: 24px;
+  color: #0066cc;
+  margin-bottom: 20px;
+}
+
+.station_container p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.station_container b {
+  color: #000;
+}
+
+.station_container button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.station_container button:hover {
+  background-color: #004c99;
+  transform: scale(1.03);
+}
+
+.station_container a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.station_container a:hover {
+  color: #004c99;
+  text-decoration: underline;
+}

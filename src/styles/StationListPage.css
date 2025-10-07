@@ -1,0 +1,62 @@
+.stations-page {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stations-page h1 {
+  font-size: 28px;
+  color: #0066cc;
+  margin-bottom: 30px;
+}
+
+.stations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.station-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.station-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.station-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #004c99;
+}
+
+.station-address {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.station-status {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.station-status.free {
+  color: #0c9e4d;
+}
+
+.station-status.busy {
+  color: #cc3300;
+}
