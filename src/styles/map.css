@@ -8,7 +8,7 @@
 
 /* Загальний контейнер попапу */
 .leaflet-popup-content {
-  margin: 6px 10px; /* менше внутрішніх відступів */
+  margin: 8px 14px; /* менше внутрішніх відступів */
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.3;

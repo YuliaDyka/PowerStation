@@ -16,7 +16,7 @@ export const stations: Station[] = [
     coords: [50.4336, 30.5308,], 
     description: "Швидка зарядка 50 кВт, доступна 24/7",
     status: "Вільна",
-    address: "Бульвар Лесі Українки 16"
+    address: "м. Київ, бульвар Лесі Українки 16"
   },
 
   {
@@ -25,7 +25,7 @@ export const stations: Station[] = [
     coords: [50.4657, 30.5111], 
     description: "Зарядка 22 кВт, парковка платна",
     status: "Зайнята",
-    address: "вул. Нижній Вал 17"
+    address: "м. Київ, вул. Нижній Вал 17"
   },
 
   {
@@ -33,7 +33,7 @@ export const stations: Station[] = [
     name: "Станція №3",
     coords: [50.3924, 30.6324], 
     description: "Зарядка 100 кВт, парковка для 2 авто",
-    address: "проспект Григоренка, 38А",
+    address: "м. Київ, проспект Григоренка, 38А",
     status: "Вільна",
   },
 
@@ -42,7 +42,7 @@ export const stations: Station[] = [
     name: "Станція №4",
     coords: [50.5191, 30.6080], 
     description: "Зарядка 100 кВт, парковка для 2 авто",
-    address: "вул. Оноре Де Бальзака 64А",
+    address: "м. Київ, вул. Оноре Де Бальзака 64А",
     status: "Вільна",
   },
 
@@ -51,7 +51,7 @@ export const stations: Station[] = [
     name: "Станція №5",
     coords: [50.4096, 30.3495],
     description: "Зарядка 100 кВт, парковка для 2 авто",
-    address: "вул. Соборна 13",
+    address: "м. Київ, вул. Соборна 13",
     status: "Вільна",
   },
 
@@ -60,8 +60,8 @@ export const stations: Station[] = [
     name: "Станція №3",
     coords: [49.8038, 23.9930],
     description: "Зарядка 100 кВт, парковка для 2 авто",
-    address: "вул. Наукова 45Б",
-    status: "Вільна",
+    address: "м. Льлів, вул. Наукова 45Б",
+    status: "Зайнята",
   },
 
   {
@@ -69,7 +69,7 @@ export const stations: Station[] = [
     name: "Станція №7",
     coords: [49.8159, 24.0196],
     description: "Зарядка 100 кВт, парковка для 2 авто",
-    address: "вул. Стрийська 134",
+    address: "м. Львів, вул. Стрийська 134",
     status: "Вільна",
   },
 
@@ -106,7 +106,7 @@ export const stations: Station[] = [
     coords: [49.4126, 26.9864],
     description: "Зарядка 100 кВт, парковка для 2 авто",
     address: "вул. І. Франка 36",
-    status: "Вільна",
+    status: "Зайнята",
   },
 
  {

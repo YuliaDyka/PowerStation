@@ -13,14 +13,16 @@
   margin-bottom: 30px;
 }
 
+/* Контейнер для списку */
 .stations-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column; /* розташовує елементи вертикально */
+  gap: 20px;              /* відстань між картками */
   width: 100%;
-  max-width: 1000px;
+  max-width: 600px;       /* обмежує ширину для красивого вигляду */
 }
 
+/* Картка станції */
 .station-card {
   background: white;
   border-radius: 12px;
@@ -29,6 +31,7 @@
   color: #333;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
+  display: block;         /* кожна картка займає весь ряд */
 }
 
 .station-card:hover {
