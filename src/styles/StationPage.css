@@ -1,57 +1,36 @@
-.buttons-row {
+.station_container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 25px;
+  align-items: center;
+  height: 100vh; /* замість min-height */
+  background-color: #f5f7fa;
+  overflow: hidden; /* прибирає повзунок */
+  padding: 0 15px; /* трохи менше внутрішніх відступів */
 }
 
-.station_container { 
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    padding-top: 120px; /* щоб було трохи відступу від верху */ 
-    min-height: 100vh; 
-    background-color: #f5f7fa; /* світлий фон */ 
-}
-
-/* Базові стилі для всіх кнопок */
-.station_container button {
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.25s, transform 0.1s;
-}
-
+/* Вміст сторінки */
 .station_container > div {
-     background-color: #fff; 
-     padding: 30px 40px; 
-     border-radius: 12px; 
-     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-     width: 100%; 
-     max-width: 600px; 
-    }
-
-/* Активна кнопка (синя) */
-.active-btn {
-  background-color: #0066cc;
-  color: #fff;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.active-btn:hover {
-  background-color: #004c99;
-  transform: scale(1.03);
+/* Заголовок і текст */
+.station_container h2 {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 15px;
 }
 
-/* Неактивна кнопка (сіра, без ефектів) */
-.disabled-btn {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-  transform: none;
-  transition: none;
+.station_container p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
 }
 
 /* Кольори статусів */
@@ -66,15 +45,97 @@
 }
 
 .status-charging {
-  color: #e6b800; /* жовтий */
+  color: #e6b800;
   font-weight: 600;
 }
 
-.charging-info {
+/* --- КНОПКИ --- */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* щоб не ламались на малих екранах */
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.1s;
+  min-width: 150px;
+}
+
+.active-btn {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.active-btn:hover {
+  background-color: #004c99;
+  transform: scale(1.03);
+}
+
+.disabled-btn {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* --- Таймер --- */
+.charging-info,
+.charging-timer {
   text-align: center;
   font-size: 15px;
-  color: #e6b800;
-  margin-top: 10px;
+  color: #0066cc;
+  margin-top: 15px;
   font-weight: 500;
 }
 
+/* --- Посилання назад --- */
+.station_container a {
+  display: inline-block;
+  margin-top: 25px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.station_container a:hover {
+  color: #004c99;
+  text-decoration: underline;
+}
+
+/* --- 📱 Адаптивність --- */
+@media (max-width: 600px) {
+  .station_container > div {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .station_container h2 {
+    font-size: 20px;
+  }
+
+  .station_container p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .buttons-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .charging-info {
+    font-size: 14px;
+  }
+}
